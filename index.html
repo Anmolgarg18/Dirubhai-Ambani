@@ -385,6 +385,14 @@
       transform: scale(1.1) translateY(-5px);
       box-shadow: 0 8px 25px rgba(231, 76, 60, 0.5);
     }
+    .banner
+    {
+      width: 100%;
+  padding-bottom: 5rem; /* similar to pb-20 in Tailwind */
+  background-image: url('Assets/banner.png');
+  background-size: cover;
+  background-position: center;
+    }
   </style>
 </head>
 <body>
@@ -402,7 +410,7 @@
     </div>
   
     <!-- Hero Section -->
-    <div class="w-full bg-cover bg-center pb-20" style="background-image: url('Assets/banner.png');">
+    <div class="banner">
       <div class="w-[90%] mx-auto h-full grid grid-cols-1 md:grid-cols-12 items-end min-h-[80vh]">
         <div class="md:col-span-5 col-span-12 flex flex-col justify-end pb-10 text-center md:text-left">
           <h3 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-[#FF9500] font-bold leading-tight">

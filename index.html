@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Zero to Empire - Dhirubhai Ambani's Vision and Grit</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    :root {
+      --primary: #2c3e50;
+      --secondary: #e74c3c;
+      --accent: #3498db;
+      --light: #ecf0f1;
+      --dark: #2c3e50;
+      --text: #34495e;
+      --shadow: 0 10px 30px -10px rgba(0,0,0,0.2);
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Raleway', sans-serif;
+    }
+    
+    body {
+      background-color: #f9f9f9;
+      color: var(--text);
+      line-height: 1.7;
+      overflow-x: hidden;
+      position: relative;
+    }
+    
+    /* Abstract background elements */
+    .background-elements {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      overflow: hidden;
+    }
+    
+    .element {
+      position: absolute;
+      border-radius: 50%;
+      opacity: 0.08;
+      filter: blur(40px);
+      animation: float 15s ease-in-out infinite;
+    }
+    
+    .element-1 {
+      width: 300px;
+      height: 300px;
+      background: var(--secondary);
+      top: 10%;
+      left: 5%;
+      animation-delay: 0s;
+    }
+    
+    .element-2 {
+      width: 400px;
+      height: 400px;
+      background: var(--accent);
+      top: 60%;
+      left: 60%;
+      animation-delay: 3s;
+    }
+    
+    .element-3 {
+      width: 250px;
+      height: 250px;
+      background: #f39c12;
+      top: 30%;
+      left: 80%;
+      animation-delay: 6s;
+    }
+    
+    @keyframes float {
+      0%, 100% {
+        transform: translate(0, 0) rotate(0deg);
+      }
+      25% {
+        transform: translate(20px, -20px) rotate(5deg);
+      }
+      50% {
+        transform: translate(-15px, 15px) rotate(-5deg);
+      }
+      75% {
+        transform: translate(10px, 10px) rotate(3deg);
+      }
+    }
+    
+    /* Header styles */
+    header {
+      text-align: center;
+      padding: 4rem 2rem 3rem;
+      position: relative;
+      overflow: hidden;
+      background: linear-gradient(135deg, rgba(255,255,255,0.9), rgba(236, 240, 241,0.9));
+      margin-bottom: 3rem;
+      border-bottom: 1px solid rgba(0,0,0,0.05);
+    }
+    
+    header::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 5px;
+      background: linear-gradient(90deg, var(--secondary), var(--accent), #f39c12);
+    }
+    
+    header h1 {
+      font-size: 3rem;
+      font-weight: 800;
+      margin-bottom: 1rem;
+      color: var(--primary);
+      position: relative;
+      display: inline-block;
+      background: linear-gradient(90deg, var(--secondary), var(--accent));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      animation: fadeInUp 1s ease;
+    }
+    
+    header p {
+      font-size: 1.3rem;
+      color: var(--text);
+      max-width: 700px;
+      margin: 0 auto;
+      font-weight: 300;
+      opacity: 0.9;
+      animation: fadeIn 1.5s ease;
+    }
+    
+    /* Main content */
+    .content {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 0 2rem 5rem;
+    }
+    
+    /* Section styles */
+    section {
+      margin-bottom: 3rem;
+      background: white;
+      padding: 2.5rem;
+      border-radius: 15px;
+      box-shadow: var(--shadow);
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      animation: fadeInUp 0.8s ease-out;
+      counter-increment: section-counter;
+      border-left: 5px solid #FF9500;
+
+    }
+    
+    section:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 40px -10px rgba(0,0,0,0.15);
+    }
+    
+    section::before {
+      content: counter(section-counter);
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      font-size: 5rem;
+      font-weight: 800;
+      color: rgba(52, 152, 219, 0.1);
+      z-index: 0;
+    }
+    
+    section h2 {
+      color: var(--primary);
+      font-size: 1.8rem;
+      margin-bottom: 1.5rem;
+      position: relative;
+      z-index: 1;
+      display: flex;
+      align-items: center;
+    }
+    
+    section h2::before {
+      
+      display: inline-block;
+      width: 30px;
+      height: 3px;
+      background: var(--secondary);
+      margin-right: 15px;
+    }
+    
+    section p {
+      margin-bottom: 1.5rem;
+      position: relative;
+      z-index: 1;
+      font-size: 1.1rem;
+      line-height: 1.8;
+    }
+    
+    section strong {
+      color: var(--secondary);
+      font-weight: 600;
+    }
+    
+    /* Image placeholders */
+    .image-placeholder {
+      width: 100%;
+      height: 300px;
+      background: linear-gradient(45deg, #f5f7fa, #e4e8eb);
+      border-radius: 10px;
+      margin: 2rem 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    }
+    
+    .image-placeholder::after {
+      content: 'Image: ' attr(data-caption);
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background: rgba(0,0,0,0.5);
+      color: white;
+      padding: 10px;
+      font-size: 0.9rem;
+      text-align: center;
+    }
+    
+    .image-placeholder i {
+      font-size: 3rem;
+      color: #bdc3c7;
+      animation: pulse 2s infinite;
+    }
+    
+    @keyframes pulse {
+      0%, 100% {
+        transform: scale(1);
+        opacity: 0.7;
+      }
+      50% {
+        transform: scale(1.1);
+        opacity: 1;
+      }
+    }
+    
+    /* Quote sections */
+    .quote {
+      font-style: italic;
+      padding: 2rem;
+      background: linear-gradient(135deg, rgba(52, 152, 219,0.1), rgba(231, 76, 60,0.1));
+      border-left: 4px solid var(--secondary);
+      margin: 2rem 0;
+      position: relative;
+      border-radius: 0 8px 8px 0;
+    }
+    
+    .quote::before {
+      content: '"';
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      font-size: 5rem;
+      color: rgba(231, 76, 60, 0.1);
+      font-family: serif;
+      line-height: 1;
+    }
+    
+    /* Animations */
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    
+    @keyframes fadeInUp {
+      from { 
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to { 
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 3rem 0;
+      background: var(--primary);
+      color: white;
+      margin-top: 5rem;
+    }
+    
+    footer p {
+      margin-bottom: 1rem;
+    }
+    
+    .social-links {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+    
+    .social-links a {
+      color: white;
+      background: rgba(255,255,255,0.1);
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s ease;
+    }
+    
+    .social-links a:hover {
+      background: var(--accent);
+      transform: translateY(-3px);
+    }
+    
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2.2rem;
+      }
+      
+      header p {
+        font-size: 1.1rem;
+      }
+      
+      section {
+        padding: 1.5rem;
+      }
+      
+      section h2 {
+        font-size: 1.5rem;
+      }
+    }
+    
+    /* Special highlight for conclusion */
+    section:last-of-type {
+      background: linear-gradient(135deg, rgba(52, 152, 219,0.05), white);
+      border-left: 5px solid color(#FF9500);
+    }
+    
+    section:last-of-type h2 {
+      color:#FF9500;
+    }
+    
+    /* Floating action button */
+    .fab {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      width: 60px;
+      height: 60px;
+      background: var(--secondary);
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      box-shadow: 0 5px 20px rgba(231, 76, 60, 0.4);
+      cursor: pointer;
+      z-index: 100;
+      transition: all 0.3s ease;
+      animation: pulse 2s infinite;
+    }
+    
+    .fab:hover {
+      transform: scale(1.1) translateY(-5px);
+      box-shadow: 0 8px 25px rgba(231, 76, 60, 0.5);
+    }
+  </style>
+</head>
+<body>
+  <div class="background-elements">
+    <div class="element element-1"></div>
+    <div class="element element-2"></div>
+    <div class="element element-3"></div>
+  </div>
+  <div>
+    <!-- Navbar -->
+    <div class="bg-white h-[10vh] w-full">
+      <div class="h-full flex items-center px-4">
+        <img src="../Ambani/Assets/navitus player logo 1.png" class="h-full object-contain" alt="Logo">
+      </div>
+    </div>
+  
+    <!-- Hero Section -->
+    <div class="w-full bg-cover bg-center pb-20" style="background-image: url('../Ambani/Assets/Group 1.png');">
+      <div class="w-[90%] mx-auto h-full grid grid-cols-1 md:grid-cols-12 items-end min-h-[80vh]">
+        <div class="md:col-span-5 col-span-12 flex flex-col justify-end pb-10 text-center md:text-left">
+          <h3 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-[#FF9500] font-bold leading-tight">
+            Zero to Empire<br>
+            Dhirubhai Ambani’s Vision and Grit
+          </h3>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Intro Section -->
+    <div class="w-full bg-white px-4 py-12">
+      <div class="w-[95%] mx-auto text-lg sm:text-xl md:text-2xl lg:text-3xl text-black space-y-6">
+        <p>Dhirubhai Ambani, the founder of Reliance Industries, is often regarded as one of India's most iconic business magnates.</p>
+        <p>His journey from humble beginnings to building a multi-billion-dollar empire offers numerous valuable lessons for entrepreneurs and individuals seeking success.</p>
+        <p class="font-bold">Here are some key lessons from his life:</p>
+      </div>
+    </div>
+  </div>
+  
+  <main class="content pt-[20px]">
+   
+    <section style="animation-delay: 0.2s;">
+      <h2>1. Dream Big and Be Ambitious</h2>
+      <p>Dhirubhai Ambani's vision was massive. He dreamed of building an Indian company that could compete globally, despite starting with very little. His ambition was not limited by his initial resources but was fueled by his unwavering belief that big dreams can lead to great achievements.<br>
+      
+      
+      <div class="quote">
+        <strong>Lesson:</strong> Don't limit yourself to what seems possible at the moment. Dream big, and aim for goals that challenge you.</p>
+      </div>
+    </section>
+
+    <section style="animation-delay: 0.3s;">
+      <h2>2. Resilience in the Face of Adversity</h2>
+      <p>Dhirubhai faced numerous challenges, including opposition from established players, financial difficulties, and legal hurdles. However, he never let these setbacks stop him. He believed in his vision and worked tirelessly to turn it into reality.<br>
+      
+      <div class="quote">
+        <strong>Lesson:</strong> Failure is not the end; it's just part of the journey. Be resilient, learn from setbacks, and keep moving forward.</p>
+      </div>
+    </section>
+
+    <section style="animation-delay: 0.4s;">
+      <h2>3. Innovative Thinking and Risk-Taking</h2>
+      <p>Dhirubhai was known for his innovative strategies and willingness to take calculated risks. For example, his decision to list Reliance on the stock market was revolutionary, as it allowed him to raise capital and bring in public participation in the company's growth.<br>
+      <div class="quote">
+        <strong>Lesson:</strong> Innovation and calculated risk-taking can be crucial for long-term success. Don't be afraid to take bold steps and think outside the box.</p>
+      </div>
+    </section>
+
+    <section style="animation-delay: 0.5s;">
+      <h2>4. Focus on Quality and Efficiency</h2>
+      <p>One of Dhirubhai's key strengths was his ability to focus on efficiency and quality. Whether it was in the textile business or petrochemical sector, he ensured that Reliance's products met the highest standards, which helped build a strong brand reputation.<br>
+      <div class="quote">
+        <strong>Lesson:</strong> Consistently focus on quality and operational efficiency. Excellence in what you do is crucial for building trust and sustaining long-term success.</p>
+      </div>
+    </section>
+
+    <section style="animation-delay: 0.6s;">
+      <h2>5. Build a Strong Team</h2>
+      <p>Dhirubhai Ambani knew that a business cannot grow without the right people. He surrounded himself with talented individuals who shared his vision and commitment to success. His leadership style was collaborative, and he empowered his team to take ownership of their work.<br>
+        <div class="quote">
+      <strong>Lesson:</strong> A strong, motivated team is essential for achieving your goals. Hire the best talent and foster a collaborative, supportive culture.</p>
+    </div>
+    </section>
+
+    <section style="animation-delay: 0.7s;">
+      <h2>6. Adaptability</h2>
+      <p>Dhirubhai was able to adapt to changing market conditions and pivot when necessary. He was one of the first business leaders in India to recognize the potential of the telecommunications sector and leveraged it to build Reliance Jio into a major force.<br>
+      <div class="quote">
+        <strong>Lesson:</strong> The business landscape is always changing. Be flexible and adapt to new opportunities and challenges as they arise.</p>
+      </div>
+      
+    </section>
+
+    <section style="animation-delay: 0.8s;">
+      <h2>7. Networking and Building Relationships</h2>
+      <p>Dhirubhai Ambani was known for his ability to connect with influential people, both within and outside the business world. He understood the power of networking and building relationships with people who could help his business grow.<br>
+     <div class="quote">
+         <strong>Lesson:</strong> Relationships are a valuable asset. Networking with the right people can open doors and provide opportunities that might not otherwise be available.</p>
+     </div>
+    </section>
+
+    <section style="animation-delay: 0.9s;">
+      <h2>8. Understanding the Power of Marketing</h2>
+      <p>Dhirubhai was a master of marketing and public relations. He understood the importance of getting the word out about his company and its products. His marketing strategies helped build Reliance's brand and made it a household name.<br>
+      <div class="quote">
+        <strong>Lesson:</strong> Marketing is critical to the success of any business. Build your brand, make your product known, and communicate effectively with your audience.</p>
+      </div>
+      
+    </section>
+
+    <section style="animation-delay: 1s;">
+      <h2>9. Work Hard, Be Persistent</h2>
+      <p>Dhirubhai Ambani's work ethic was legendary. He was known for his tireless work habits and dedication. Despite coming from modest beginnings, he never stopped working hard and pushing forward, no matter the challenges.<br>
+      <div class="quote">
+        <strong>Lesson:</strong> Hard work and persistence are key to success. Success doesn't happen overnight—consistent effort over time is what leads to achievement.</p>
+      </div>
+    </section>
+
+    <section style="animation-delay: 1.1s;">
+      <h2>10. Financial Prudence and Vision</h2>
+      <p>Dhirubhai Ambani was careful about managing Reliance's finances. He was also very strategic about expanding his company and ensuring that it had the necessary capital for future growth. His vision for the company often extended far beyond the current market situation.<br>
+      
+      
+      <div class="quote">
+        <strong>Lesson:</strong> Managing finances wisely is crucial for business longevity. Having a vision for the future can guide your financial decisions and help you navigate through challenges.</p>
+      </div>
+    </section>
+
+    <section style="animation-delay: 1.2s;">
+      <h2>11. Empower Your People</h2>
+      <p>Dhirubhai believed in empowering his employees and giving them the autonomy to make decisions. He encouraged risk-taking and innovation, which helped the company grow and innovate in different sectors.<br>
+        <div class="quote">
+          <strong>Lesson:</strong> Empower your team by giving them the autonomy to take risks, make decisions, and innovate. Trust in their abilities and foster an environment of growth and opportunity.</p>
+        </div>
+      
+    </section>
+
+    <section style="animation-delay: 1.3s;">
+      <h2>12. Stay Grounded and Humble</h2>
+      <p>Despite his immense success, Dhirubhai Ambani remained humble and approachable. He never let his success make him arrogant, and he maintained strong ties with his family and roots.<br>
+        <div class="quote">
+          <strong>Lesson:</strong> No matter how successful you become, stay grounded and humble. Authenticity and humility will help you connect with others and earn their respect.</p>
+        </div>
+    </section>
+
+    <section style="animation-delay: 1.4s;">
+      <h2>13. Take Control of Your Destiny</h2>
+      <p>Dhirubhai Ambani often took matters into his own hands rather than waiting for opportunities to come to him. He believed in creating his own path, making bold decisions, and controlling his destiny.<br>
+        <div class="quote">
+          <strong>Lesson:</strong> Don't wait for the perfect moment or someone else to create opportunities for you. Take charge of your life and make things happen.</p>
+        </div>
+      
+    </section>
+
+    
+  </main>
+
+  <footer>
+    <p class="max-w-[70%] mx-auto">Dhirubhai Ambani's life teaches us that success is not just about having a great idea but also about persistence, risk-taking, adaptability, and leadership. His journey from a small town in Gujarat to building one of India's largest conglomerates is a testament to the power of vision, hard work, and a relentless pursuit of goals.</p>
+    
+    
+  </footer>
+
+
+
+  <script>
+    // Simple animation trigger on scroll
+    document.addEventListener('DOMContentLoaded', function() {
+      const sections = document.querySelectorAll('section');
+      
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.style.opacity = 1;
+            entry.target.style.transform = 'translateY(0)';
+          }
+        });
+      }, { threshold: 0.1 });
+      
+      sections.forEach(section => {
+        section.style.opacity = 0;
+        section.style.transform = 'translateY(20px)';
+        section.style.transition = 'all 0.6s ease-out';
+        observer.observe(section);
+      });
+    });
+  </script>
+</body>
+</html>
